@@ -1,0 +1,12 @@
+{
+  "name": "dannysmith-atom-theme",
+  "theme": "syntax",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Danny's Atom Theme.",
+  "repository": "https://github.com/dannysmith/dannysmith-atom-theme",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}

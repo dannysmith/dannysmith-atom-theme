@@ -1,0 +1,126 @@
+@import "ui-variables";
+@import "colors";
+@import "typography";
+
+atom-text-editor {
+  background-color: @background;
+  color: @foreground;
+}
+
+atom-text-editor {
+  .invisible-character,
+  .indent-guide {
+    color: @invisible;
+  }
+
+  .gutter {
+    background-color: @gutterBackground;
+  }
+
+  .gutter .line-number {
+    opacity: 0.15;
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    background-color: darken(@gutterBackground, 5%);
+  }
+
+  .cursor {
+    border-color: @foreground;
+  }
+
+  .selection .region {
+    background-color: lighten(@background, 5%);
+  }
+
+  .line-number.cursor-line-no-selection {
+    background-color: darken(@gutterBackground, 2%);
+  }
+
+  &.editor {
+    .invisible-character {
+       color: #2b2b2b;
+    }
+  }
+}
+
+.bracket-matcher .region {
+  background-color: darken(@background, 10%);
+  opacity: 0.25;
+}
+
+
+// Syntax
+.syntax--comment {
+  color: @commentForeground;
+  font-style: italic;
+}
+
+.syntax--entity, .syntax--tag {
+  color: @entityForeground;
+}
+
+.syntax--keyword, .syntax--storage.syntax--typee {
+  color: @keywordForeground;
+}
+
+.syntax--constant {
+  color: @constantForeground;
+
+  &.syntax--numeric,
+  &.syntax--boolean {
+    color: @numericConstantForeground;
+  }
+}
+
+.syntax--variable {
+  color: @variableForeground;
+}
+
+.syntax--delimiter, .syntax--brace {
+  color: @foreground;
+}
+
+.syntax--delimiter.syntax--period {
+  color: lighten(@stringForeground, 15%);
+}
+
+.syntax--invalid.syntax--deprecated {
+  text-decoration: underline;
+  color: @attention;
+}
+
+.syntax--invalid.syntax--illegal {
+  color: @attention;
+}
+
+.syntax--string {
+  color: @stringForeground;
+
+  .syntax--constant.syntax--character.syntax--escape {
+    color: @constantForeground;
+  }
+
+  &.syntax--regexp {
+    color: lighten(@stringForeground, 15%);
+
+    .syntax--source.syntax--ruby.syntax--embedded,
+    .syntax--string.syntax--regexp.syntax--arbitrary-repitition {
+      color: @attention;
+    }
+  }
+}
+
+.syntax--function {
+  color: @functionForeground;
+
+  &.syntax--punctuation {
+    color: @foreground;
+  }
+}
+
+.syntax--property-name {
+  color: lighten(@constantForeground, 10%);
+}

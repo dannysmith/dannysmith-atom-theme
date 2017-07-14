@@ -1,0 +1,35 @@
+atom-text-editor.editor {
+  font-family: "OperatorMono-Book";
+  text-rendering: optimizeLegibility;
+  font-size: 15px;
+  line-height: 1.4;
+
+  // Disable ligatures in text strings and Regexps.
+  atom-text-editor.editor .syntax--string.syntax--quoted,
+  atom-text-editor.editor .syntax--string.syntax--regexp {
+    -webkit-font-feature-settings: "liga" off, "calt" off;
+  }
+
+  .syntax--operator,
+  .syntax--type.syntax--function.syntax--arrow,
+  .syntax--punctuation.syntax--comment {
+    font-family: "Fira Code";
+  }
+
+  // .syntax--entity.syntax--other.syntax--attribute-name,
+  // .syntax--storage.syntax--type.syntax--class,
+  // .syntax--type.syntax--var,
+  // .syntax--meta.syntax--parameters,
+  // .syntax--keyword.syntax--control,
+  // .syntax--modifier,
+  // .comment, .syntax--comment {
+  //     font-family: "OperatorMono-BookItalic";
+  //     font-size: 1em;
+  // }
+
+  .syntax--name.syntax--function,
+  .syntax--variable.syntax--default,
+  .syntax--name.syntax--class {
+    font-weight: 600;
+  }
+}
